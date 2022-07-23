@@ -1,0 +1,43 @@
+:root {
+    --primary-color: #263238;
+    --secondary-color: rgb(255, 57, 133);
+    --background-color: rgb(250, 229, 229); 
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: var(--primary-color)
+}
+
+h2 {
+    color: var(--secondary-color)
+}
+input{
+    outline: none;
+}
+button {
+    min-height: 36px;
+    min-width: 60px;
+    border-style: none;
+    /* margin-bottom: 10px; */
+    font-weight: bold;
+    color: white;
+    background-color: var(--primary-color);
+    outline: none;
+    border-radius: 5px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.appcontainer{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+}
