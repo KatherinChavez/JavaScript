@@ -5,6 +5,7 @@ import { GameService } from "./gameService.js";
 export class GameViewController extends ViewController {
     constructor(appManager, parent) {
         super(appManager, parent, 'Game');
+        this.type = 'gameViewController';
         this.mainContainer.classList.add('gameViewController');
         this.service = new GameService(this);
         this.cardViews = [];
@@ -13,6 +14,10 @@ export class GameViewController extends ViewController {
         hudContainer.className = 'gameViewController_hudContainer';
         this.contenContainer.appendChild(hudContainer);
         this.contenContainer.classList.add('gameViewController_contenContainer');
+        this.navigationBar.classList.add('gameViewController_navigationBar');
+
+        this.titleLbl.classList.add('gameViewController_navigationBar_titleLbl');
+        this.backBtn.classList.add('gameViewController_navigationBar_backBtn');
 
         this.cardsContainer = document.createElement('div');
         this.cardsContainer.className = 'gameViewController_cardsContainer';
@@ -45,18 +50,28 @@ export class GameViewController extends ViewController {
             this.cardViews.push(cardView);
         });
     }
-    
-    end(){
-      this.cardViews.forEach(cardView =>{
-        cardView.end();
-      });
+
+    end() {
+        this.cardViews.forEach(cardView => {
+            cardView.end();
+        });
+    }
+
+    isGameCompleted() {
+        for (let index = 0; index < this.cardViews.length; index++) {
+            const card = this.cardViews[index].card;
+            if (!card.isDiscovered) {
+                return false;
+            }
+        }
+        return true;
     }
 
     reset() {
-        this.appManager.reset();
-        this.service.getCards(); //obtiene tarjetas de nuevo
+        this.appManager.reset(true);
+        this.service.getCards(); //obtiene tarjetas
     }
-    
+
     show() { }
 
     hide() { }
@@ -67,6 +82,10 @@ export class GameViewController extends ViewController {
 
     updateTime() {
         this.timeLbl.innerHTML = `<b>Time:</b> ${this.appManager.time}`;
+    }
+
+    sendScore(score) {
+        this.service.sendScore(score);
     }
 
 }

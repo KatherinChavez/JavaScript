@@ -3,8 +3,10 @@
 .menuViewController_text1Lbl {
     text-align: center;
     width: 90%;
-    font-size: 25px;
+    font-size: 39px; 
     font-weight: bold;
+    color:rgb(143, 12, 47);
+    margin-bottom: 30px;
 }
 
 .menuViewController_text2Lbl {
@@ -12,6 +14,12 @@
     width: 90%;
     font-size: 20px;
     margin-bottom: 10px;
+}
+
+.menuViewController_navigationBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuViewController_contenContainer {
@@ -22,14 +30,19 @@
 }
 
 .menuViewController_usernameIn {
-    width: 90%;
-    height: 30px;
+    text-indent: 10px; /*permite dar espacio al texto dentro del input*/
+    width: 40%;
+    height: 35px;
     margin-bottom: 10px;
     border-radius: 5px;
-    border-color: white;
+    border-color: rgba(255, 255, 255, 0.788);  
+    font-size: 20px;
 }
 
 .menuViewController_buttons {
-    width: 90%;
-    height: 30px;
+    width: 40%;
+    height: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    
 }

@@ -3,7 +3,10 @@ import { ViewController } from "../viewController.js";
 export class MenuViewController extends ViewController {
     constructor(appManager, parent) {
         super(appManager, parent, 'Menu');
+        this.type = 'menuViewController';
         this.mainContainer.classList.add('menuViewControler');
+        this.navigationBar.classList.add('menuViewController_navigationBar');
+        
         this.backBtn.hidden = true;
 
         var text1Lbl = document.createElement('p');

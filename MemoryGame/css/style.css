@@ -1,13 +1,15 @@
 :root {
-    --primary-color: #263238;
-    --secondary-color: rgb(255, 57, 133);
-    --background-color: rgb(250, 229, 229); 
+    --primary-color: #2c2c54;
+    --secondary-color: rgb(209, 25, 74);
+    --background-color: rgb(252, 244, 244);
+    --card-View-normal: #8e5bb3;
+    --card-View-dicovered: #dba8ec;
 }
 
 * {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 h1 {
@@ -17,14 +19,16 @@ h1 {
 h2 {
     color: var(--secondary-color)
 }
-input{
+
+input {
     outline: none;
 }
+
 button {
     min-height: 36px;
     min-width: 60px;
     border-style: none;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     font-weight: bold;
     color: white;
     background-color: var(--primary-color);
@@ -36,7 +40,7 @@ button:focus {
     outline: none;
 }
 
-.appcontainer{
+.appcontainer {
     width: 100vw;
     height: 100vh;
     background-color: var(--background-color);

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(29, 202, 145);
+    background-color:var(--card-View-normal);
     width: 80px;
     height: 80px;
     font-size: 40px;
@@ -12,4 +12,9 @@
 
 .cardView_disabled{
     pointer-events: none;
+}
+
+.cardView_discovered{
+    pointer-events: none;
+    background-color: var(--card-View-dicovered);
 }

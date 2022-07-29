@@ -1,41 +1,60 @@
 .gameViewController {}
 
 .gameViewController_contenContainer {
+    /*container de las tarjetas*/
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
+.gameViewController_navigationBar {}
+
+.gameViewController_navigationBar_titleLbl {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameViewController_navigationBar_backBtn {
+    position: fixed;
+    margin: 15px 0px 0px 25px;
+    font-size: 18px;
+}
+
 .gameViewController_hudContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(222, 223, 222);
+    background-color: #cbc4d1;
     height: 60px;
-    width: 90%;
-    margin-bottom: 10px;
+    width: 65%;
+    margin-bottom: 18px;
 }
 
 .gameViewController_cardsContainer {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 90%;
+    width: 65%;
     height: auto;
     flex-wrap: wrap;
 }
 
 .gameViewController_clicksLbl {
-    margin-left: 5px;
-    font-size: 18px;
+    margin-left: 18px;
+    font-size: 19px;
 }
 
 .gameViewController_timeLbl {
     margin-left: 5px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .gameViewController_resetBtn {
     margin-right: 5px;
+    font-size: 20px;
+    margin-right: 18px;
 }
