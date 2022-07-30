@@ -25,6 +25,10 @@ export class AppManager {
 
         this.cardView1 = null;
         this.cardView2 = null;
+
+        this.audioCorrecto = new Audio('../Sound/correcta.mp3');
+        this.audioGameComplete = new Audio('../Sound/gameCompleted.mp3');
+
     }
 
     showMenu() {
@@ -89,10 +93,12 @@ export class AppManager {
             this.cardView2.discover();
             this.cardView1 = null;
             this.cardView2 = null;
+            this.audioCorrecto.play();
 
             if (this.gameViewControler.isGameCompleted()) {
-                console.log('game completed');// muestra ventana 
+                this.audioGameComplete.play();// muestra ventana
                 swal("Game Completed!", "", "success");
+                
                 this.cleanGameTimer();
                 this.gameViewControler.sendScore({ "username": this.username, "clicks": this.clicks, "time": this.time, "score": (this.clicks + this.time) });
             }

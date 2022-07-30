@@ -1,5 +1,6 @@
 import { View } from "../view.js";
 
+
 export class CardView extends View {
     constructor(parent, card, appManager) {
         super(parent);
@@ -9,12 +10,15 @@ export class CardView extends View {
         this.defaultIcon = '❔'; //icono de la tarjeta
         this.mainContainer.innerHTML = this.defaultIcon;
         this.mainContainer.onclick = this.onSelected.bind(this);
-        //this.mySound = new Audio('../MemoryGame/js/Sound/correcta.mp3');
+        
+        this.audioClick = new Audio('../Sound/click.mp3');
+
     }
 
     onSelected() {
         this.appManager.onCardViewSelected(this);
-        //this.mySound.play();
+        this.audioClick.play();
+
     }
 
     show() {
