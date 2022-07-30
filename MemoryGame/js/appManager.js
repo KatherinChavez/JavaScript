@@ -98,7 +98,7 @@ export class AppManager {
             if (this.gameViewControler.isGameCompleted()) {
                 this.audioGameComplete.play();// muestra ventana
                 swal("Game Completed!", "", "success");
-                
+
                 this.cleanGameTimer();
                 this.gameViewControler.sendScore({ "username": this.username, "clicks": this.clicks, "time": this.time, "score": (this.clicks + this.time) });
             }
@@ -110,7 +110,7 @@ export class AppManager {
         }
     }
 
-   
+
 
     updateTime() {
         if (this.time < this.timeLimit) {
