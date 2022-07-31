@@ -22,7 +22,7 @@ export class ViewController extends View {
         this.contenContainer.className = 'contenContainer';
 
         this.backBtn = document.createElement('button');
-        this.backBtn.innerHTML = 'Back';
+        this.backBtn.innerHTML = '🔙';
         this.navigationBar.appendChild(this.backBtn);
 
         this.titleLbl = document.createElement('p');

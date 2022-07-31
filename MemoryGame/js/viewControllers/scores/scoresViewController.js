@@ -14,8 +14,6 @@ export class ScoresViewController extends ViewController {
         this.titleLbl.classList.add('scoresViewController_navigationBar_titleLbl');
         this.backBtn.classList.add('scoresViewController_navigationBar_backBtn');
 
-        // this.backBtn.onclick = this.remove.bind(this);
-
         this.service.getScores();
     }
 
@@ -65,12 +63,8 @@ export class ScoresViewController extends ViewController {
 
         });
     }
-
-    show() {
-
-    }
-    hide() {
-
-    }
+   
+    show() { }
+    hide() { }
 
 }
